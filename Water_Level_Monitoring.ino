@@ -5,11 +5,11 @@
 
 WiFiMulti WiFiMulti;
 
-const char* ssid     = "Mobile"; // Your SSID (Name of your WiFi)
-const char* password = "123456789"; //Your Wifi password
+const char* ssid     = "SSID"; // Your SSID (Name of your WiFi)
+const char* password = "123**789"; //Your Wifi password
 
 const char* host = "api.thingspeak.com";
-String api_key = "04NXTNQ2T7BYIDFD"; // Your API Key provied by thingspeak
+String api_key = "04NX*****BYIDFD"; // Your API Key provied by thingspeak
 
 const int trigPin = 5; //GPIO5
 const int echoPin = 18; //GPIO18
