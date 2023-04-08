@@ -7,7 +7,7 @@
 int redLed = 6;
 int greenLed = 7;
 int buzzer = 10;
-int sensorThres = 150;
+int sensorThres = 300;
 int smoke = A1;
 
 void setup() {
@@ -26,15 +26,17 @@ void loop() {
   // Checks if it has reached the threshold value
   if (analogSensor > sensorThres)
   {
+    Serial.println("Smoke Detected");
     digitalWrite(redLed, HIGH);
     digitalWrite(greenLed, LOW);
-    tone(buzzer, 1000, 200);
+    digitalWrite(buzzer, HIGH);
   }
   else
   {
+    Serial.println("Smoke Not Detected");
     digitalWrite(redLed, LOW);
     digitalWrite(greenLed, HIGH);
-    noTone(buzzer);
+    digitalWrite(buzzer, LOW);
   }
-  delay(100);
+  delay(2000);
 }
